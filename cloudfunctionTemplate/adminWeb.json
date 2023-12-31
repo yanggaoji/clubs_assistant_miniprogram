@@ -1,0 +1,11 @@
+[
+  {
+    "name": "test",
+    "value": {
+      "func": "removeClub",
+      "data": {
+        "club_id": 85
+      }
+    }
+  }
+]

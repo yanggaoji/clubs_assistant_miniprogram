@@ -1,0 +1,22 @@
+<van-nav-bar title="社团详情" style="margin-bottom: 20rpx;" left-arrow left-text="返回" custom-class="nav-bar" bind:click-left="back" />
+
+<van-cell-group>
+  <van-cell title="{{club.club_name}}" label="{{club.club_category}}" size="large">
+    <view slot="icon" class="head">
+      <image src="{{club.club_icon?club.club_icon:'https://www.lcu.edu.cn/lcdx2023/images/ti.png'}}" style="width: 100%;height: 100%;" />
+    </view>
+  </van-cell>
+  <van-cell title="业务指导单位" value="{{club.club_founder}}" />
+  <van-cell title="当前加入人数" value="{{club.club_count}} " />
+</van-cell-group>
+
+<rich-text nodes="{{club.club_description?club.club_description:'暂无简介'}}" class="club_description" />
+
+
+<!-- 哈哈，有现成的为何不用？ -->
+<van-submit-bar custom-class="submit" button-text="登记加入" bind:submit="onSubmit" tip="{{ true }}">
+  <view wx:if="{{!isBind}}" style="margin-right: auto;">
+    您还没有绑定身份哦
+  </view>
+  <view slot="tip">每个人只能参加两个社团，登记加入某个社团后仍可以取消，取消后不计入已加入社团的数量</view>
+</van-submit-bar>

@@ -1,0 +1,25 @@
+<view class="close_btn" style="margin-top: {{navigationBar}}px;" bind:tap="close">
+  <van-button plain icon="cross" />
+</view>
+<view class="wx-page-content">
+  <view class="page-title">{{userData.mask_name}}，验证您的信息</view>
+
+  <view class="page-tises" style="margin-bottom: 50rpx;">请补全你的姓名（注意，不必输入全名，提交 * 所在的任意数量的字即可）：</view>
+  <van-cell-group>
+    <van-field model:value="{{inputName}}" placeholder="{{userData.mask_name}}" size="large" input-align="center" />
+
+  </van-cell-group>
+  <!-- <view class="page-tises" style="margin: 50rpx 0;">分享您的QQ号码，方便我们社团的相关负责人联系您：</view>
+  <van-cell-group>
+    <van-field model:value="{{qq}}" placeholder="QQ号码" size="large" input-align="center" />
+  </van-cell-group> -->
+
+  <view class="bottom">
+    您输入的姓名只用来验证您的身份
+    <!-- ；您输入QQ号码是为了方便社团管理人员联系您 -->
+  </view>
+  <view class="lodingBtn {{inputName.length&&qq.length ? 'trueLoding' : ''}}" bind:tap="bindStudent">绑定账号</view>
+</view>
+<button class="contact" open-type="contact">
+  遇到问题？点击与我们交流
+</button>

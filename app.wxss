@@ -1,0 +1,52 @@
+/**app.wxss**/
+
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #F7F8FA;
+  --button-primary-background-color: #2E758A;
+  --button-primary-border-color: #2E758A;
+  /* --button-border-radius: 10px;
+  --button-primary-color: rgb(255, 255, 255); */
+}
+
+view {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.wx-page-content {
+  padding: 50rpx;
+}
+
+.wx-page-content .page-title {
+  font-size: 60rpx;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 30rpx;
+}
+
+.wx-page-content .page-tises {
+  font-size: 35rpx;
+  color: #000;
+}
+
+.nav-bar .van-nav-bar__text,
+.nav-bar .van-icon {
+  color: #2E758A !important;
+}
+
+.contact {
+  font-weight: bold;
+  font-size: small;
+  width: 100%;
+  text-align: center;
+  color: #2C8EBB;
+  margin-bottom: 200rpx;
+}
+
+.contact::after {
+  border: none;
+}

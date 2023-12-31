@@ -1,0 +1,22 @@
+<van-nav-bar title="我的" style="margin-bottom: 20rpx;" />
+<block wx:if="{{isBind}}">
+  <van-cell-group title="我加入的（已登记）" inset>
+    <block wx:for="{{myClub}}" wx:key="club_id">
+      <van-cell title="{{item.club_name}}" label="{{item.club_founder}}" size="large">
+        <view slot="right-icon" style="margin: auto;">
+          <van-button size="small" data-item="{{item}}" bind:tap="removeClub">删除</van-button>
+        </view>
+      </van-cell>
+    </block>
+    <van-empty description="您还没有加入任何社团" wx:if="{{!myClub.length}}" />
+  </van-cell-group>
+  <view style="margin: 50rpx 35rpx;">
+    <van-button plain type="danger" block round bind:tap="gotoUnbind">解除绑定</van-button>
+  </view>
+</block>
+<view style="margin: 50rpx 35rpx;" wx:if="{{!isBind}}">
+  <van-button plain type="primary" block round bind:tap="gotoBind">前往绑定信息</van-button>
+</view>
+<button class="contact" open-type="contact">
+  遇到问题？点击与我们交流
+</button>

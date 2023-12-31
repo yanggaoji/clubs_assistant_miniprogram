@@ -1,0 +1,31 @@
+<input class="input_box" type="number" maxlength="10" bindinput="inputValue" focus="{{isInput}}" />
+<view class="close_btn" style="margin-top: {{navigationBar}}px;" bind:tap="close">
+  <van-button plain icon="cross" />
+</view>
+<view class="wx-page-content">
+  <view class="page-title">绑定您的身份</view>
+  <view class="page-tises">请输入您的10位学号</view>
+  <view class="stuCode" bind:tap="focusCode">
+    <view class="part year">
+      <view class="{{veCode[0] ? 'activeView' : 0}}">{{veCode[0]}}</view>
+      <view class="{{veCode[1] ? 'activeView' : 0}}">{{veCode[1]}}</view>
+      <view class="{{veCode[2] ? 'activeView' : 0}}">{{veCode[2]}}</view>
+      <view class="{{veCode[3] ? 'activeView' : 0}}">{{veCode[3]}}</view>
+    </view>
+    <view class="part">
+      <view class="{{veCode[4] ? 'activeView' : 0}}">{{veCode[4]}}</view>
+      <view class="{{veCode[5] ? 'activeView' : 0}}">{{veCode[5]}}</view>
+      <view class="{{veCode[6] ? 'activeView' : 0}}">{{veCode[6]}}</view>
+      <view class="{{veCode[7] ? 'activeView' : 0}}">{{veCode[7]}}</view>
+      <view class="{{veCode[8] ? 'activeView' : 0}}">{{veCode[8]}}</view>
+      <view class="{{veCode[9] ? 'activeView' : 0}}">{{veCode[9]}}</view>
+    </view>
+  </view>
+  <view class="bottom">
+    以上所有信息都只用来验证您的身份
+  </view>
+  <view class="lodingBtn {{veCode.length == 10 ? 'trueLoding' : ''}}" bind:tap="gotoVerify">下一步</view>
+</view>
+<button class="contact" open-type="contact">
+  遇到问题？点击与我们交流
+</button>

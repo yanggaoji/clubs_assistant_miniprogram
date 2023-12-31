@@ -1,0 +1,38 @@
+{
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-icon": "@vant/weapp/icon/index"
+  },
+  "pages": [
+    "pages/index/home",
+    "pages/login/student_login",
+    "pages/login/student_verify",
+    "pages/index/my",
+    "pages/index/detail"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/home",
+        "text": "主页",
+        "iconPath": "icon/home.png",
+        "selectedIconPath": "icon/home_active.png"
+      },
+      {
+        "pagePath": "pages/index/my",
+        "text": "我的",
+        "iconPath": "icon/person.png",
+        "selectedIconPath": "icon/person_active.png"
+      }
+    ],
+    "selectedColor": "#2E758A"
+  }
+}

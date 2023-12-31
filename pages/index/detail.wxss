@@ -1,0 +1,22 @@
+.head {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 30rpx;
+  border: #dddddd 5rpx solid;
+}
+
+.club_description {
+  background-color: #fff;
+  padding: 40rpx;
+  font-size: 14px;
+  padding-bottom: 300rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submit button {
+  background-color: #2E758A;
+  border-color: #2E758A;
+}

@@ -1,0 +1,18 @@
+<van-sticky>
+  <van-nav-bar title="社团列表" />
+  <van-cell-group style="margin-bottom: 10rpx;">
+    <van-search value="{{ searchStr }}" input-align="center" placeholder="请输入搜索关键词" bind:change="search" />
+  </van-cell-group>
+  <van-dropdown-menu active-color="#2E758A" z-index="100">
+    <van-dropdown-item value="{{category}}" options="{{clubCategorys}}" bind:change="changeCategory" />
+  </van-dropdown-menu>
+</van-sticky>
+
+<van-cell-group>
+  <block wx:for="{{showList}}" wx:key="club_id">
+    <van-cell title-width="500rpx" title="{{item.club_name}}" value="查看" label="{{item.club_category}}" is-link size="large" bind:tap="gotoDetail" data-item="{{item}}" />
+  </block>
+</van-cell-group>
+<view style="padding: 100rpx 0;">
+  <van-divider contentPosition="center" dashed>Build EV.{{accountInfo.envVersion}} | V.{{accountInfo.version}}</van-divider>
+</view>
